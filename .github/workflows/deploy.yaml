@@ -10,7 +10,8 @@ permissions:
   id-token: write
 
 jobs:
-  deploy: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-latest
 
   steps:
     - uses: actions/checkout@v4
