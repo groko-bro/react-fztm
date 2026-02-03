@@ -1,4 +1,4 @@
-const apiKey = '65e8859a-976b-442e-b0b4-cbda1ad1cf6b'
+const apiKey = ''
 
 const headers = {
     'api-key': apiKey
