@@ -6,8 +6,6 @@ if (apiKey) {
     headers[apiKey] = apiKey
 }
 
-
-
 export const getTrack = (trackId: string) => {
     
     return fetch('https://musicfun.it-incubator.app/api/1.0/playlists/tracks/' + trackId, {
@@ -15,7 +13,6 @@ export const getTrack = (trackId: string) => {
         })
         .then(res => res.json())
 }
-
 
 export const getTracks = () => {
 
