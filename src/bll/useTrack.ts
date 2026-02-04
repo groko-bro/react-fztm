@@ -2,20 +2,20 @@ import { useState, useEffect } from "react";
 import { getTrack } from "../dal/api";
 import type { TrackDetailsResource } from "../dal/types";
 
-export function useTrack(selectrdTrackId: string | null) {
+export function useTrack(selectedTrackId: string | null) {
 
     const [selectedTrack, setSelectedTrack] = useState<TrackDetailsResource | null>(null);
 
     useEffect(() => {
 
-        if (!selectrdTrackId) return;
+        if (!selectedTrackId) return;
 
-        getTrack(selectrdTrackId)
+        getTrack(selectedTrackId)
             .then(json => {
                 setSelectedTrack(json.data);
             });
 
-    }, [selectrdTrackId]);
+    }, [selectedTrackId]);
 
     return { selectedTrack };
 }
