@@ -16,8 +16,9 @@ export const getTrack = (trackId: string) => {
 
 export const getTracks = () => {
 
-    return fetch('https://musicfun.it-incubator.app/api/1.0/playlists/tracks', {
+    return fetch('https://musicfun.it-incubator.app/api/1.0/playlists/tracks?pageSize=5', {
             headers: headers
         })
             .then(res => res.json())
+            
 }
